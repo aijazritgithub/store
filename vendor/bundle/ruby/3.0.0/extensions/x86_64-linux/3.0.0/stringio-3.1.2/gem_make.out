@@ -1,0 +1,15 @@
+current directory: /home/dell/Desktop/kirana/vendor/bundle/ruby/3.0.0/gems/stringio-3.1.2/ext/stringio
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20241231-44086-pgjxl8.rb extconf.rb
+creating Makefile
+
+current directory: /home/dell/Desktop/kirana/vendor/bundle/ruby/3.0.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= clean
+
+current directory: /home/dell/Desktop/kirana/vendor/bundle/ruby/3.0.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\=
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/dell/Desktop/kirana/vendor/bundle/ruby/3.0.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20241231-44086-sm4r57
