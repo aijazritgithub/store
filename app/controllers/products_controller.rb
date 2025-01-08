@@ -1,4 +1,5 @@
-class ProductController < ApplicationController
+class ProductsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
   before_action :set_id, only: [:update, :destroy, :show]
 
   def index
@@ -8,7 +9,7 @@ class ProductController < ApplicationController
   def create
     product = Product.new(product_params)
     if product.save
-      render json: { message: "Product created successfully",product :product }, status: :ok
+      render json: { message: "Product created successfully",product: product }, status: :ok
     else
       render json: product.errors.full_messages, status: :unprocessable_entity
     end
@@ -34,7 +35,7 @@ class ProductController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name)
+    params.require(:product).permit(:name,:price ,:quantitiy,:description)
   end
 
   def set_id
